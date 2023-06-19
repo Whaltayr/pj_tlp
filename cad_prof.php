@@ -5,21 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Cadastro de Turmas</title>
+    <title>Cadastro de Professores</title>
 </head>
 <body>
+
     <header class="header_reg_turmas"><nav>
         <ul>
-            <li> <a href="home.html">HOME</a></li>
-            <li><a href="cad_prof.html">PROFESSORES</a></li>
-            <li><a href="cad_turmas.html">TURMAS</a></li>
-            <li><a href="cad_dis.html">DISCIPLINAS</a></li>
-            <li><a href="relatorio.html">RELÁTORIOS</a></li>
+            <li> <a href="home.php">HOME</a></li>
+            <li><a href="cad_prof.php">PROFESSORES</a></li>
+            <li><a href="cad_turmas.php">TURMAS</a></li>
+            <li><a href="cad_dis.php">DISCIPLINAS</a></li>
+            <li><a href="relatorio.php">RELÁTORIOS</a></li>
         </ul>
     </nav></header>
 
         <div class="container">
-            <h4>Registro de turmas</h4>
+            <h4 class="h4cad">Registro de Professores</h4>
+            
                 <form action="" method="get">
 
 
@@ -30,24 +32,28 @@
               </div>
 
               <div class="input-group">
-                <label for="email">Código do Classroom</label>
+                <label for="num_alunos">Data de Nascimento</label>
+              <input class="inp_group" type="date" name="data_nasc" id="data_nasc">
+          </div>
+
+          <div class="input-group">
+            <label for="classe">Telefone</label>
+            <input type="tel" class="inp_group" name="Telefone" id="Telefone"></input>
+        </div>
+
+        <div class="input-group">
+            <label for="nif">NIF</label>
+           <input class="inp_group" type="text" name="nif" id="nif">
+        </div>
+
+              <div class="input-group">
+                <label for="email">E-mail</label>
                 <input class="inp_group" type="email" name="email" id="email">
             </div>
 
-                 <div class="input-group">
-                      <label for="num_alunos">Nº Alunos</label>
-                    <input class="inp_group" type="number" name="num_alunos" id="num_alunos">
-                </div>
+            
 
-                <div class="input-group">
-                    <label for="classe">Classe</label>
-                    <select class="inp_group" name="classe" id="classe"></select>
-                </div>
-
-                <div class="input-group">
-                    <label for="professor">Professor</label>
-                    <select class="inp_group" name="professor" id="professor"></select>
-                </div>
+                
                 
                 <div class="input-group">
                     <label for="disciplina">Disciplina</label>
@@ -60,5 +66,6 @@
             
                 </form>
         </div>
+    
 </body>
 </html>

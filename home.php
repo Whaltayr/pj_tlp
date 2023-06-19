@@ -10,11 +10,11 @@
 <body class="home_landing">
     <header class="header_home"><nav>
         <ul>
-            <li> <a href="#">HOME</a></li>
-            <li><a href="cad_prof.html">PROFESSORES</a></li>
-            <li><a href="cad_turmas.html">TURMAS</a></li>
-            <li><a href="cad_dis.html">DISCIPLINAS</a></li>
-            <li><a href="relatorio.html">RELÁTORIOS</a></li>
+        <li> <a href="home.php">HOME</a></li>
+            <li><a href="cad_prof.php">PROFESSORES</a></li>
+            <li><a href="cad_turmas.php">TURMAS</a></li>
+            <li><a href="cad_dis.php">DISCIPLINAS</a></li>
+            <li><a href="relatorio.php">RELÁTORIOS</a></li>
         </ul>
     </nav></header>
 
