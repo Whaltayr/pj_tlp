@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+<?php
+ 
+ if(isset($_POST['Registrar']))
+{
+    include_once('config.php');
+    $nome = $_POST['dis_nome'];
+
+    $stmt = $conexao->prepare("INSERT INTO disciplinas (Nome) VALUES (?)");
+    $stmt->bind_param("s", $nome);
+    $stmt->execute();
+}
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,13 +35,16 @@
      
 
         <h4 class="h4cad">Registro de Disciplinas</h4>
-            <form method="get" class="container_rel">
+            <form method="POST" class="container_rel">
                 
                 <div class="input-group_rel">
                     <label for="dis_nome">Nome</label>
-                    <input type="text" class="inp_group_rel"name="dis_nome" id="dis_nome"></input>
+                    <input type="text" class="inp_group_rel" name="dis_nome" id="dis_nome"></input>
                 </div>
-                <div class="reg_rel"><input id="inp_relatorio" class="input_rel" type="button" value="REGISTRAR"></div>
+                <div class="reg_rel">
+                    <button id="inp_relatorio" class="input_rel" type="submit" name="Registrar" value="Registar">Registar</button>
+
+                </div>
 
             </form>
     

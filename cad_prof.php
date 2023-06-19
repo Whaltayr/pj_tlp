@@ -1,4 +1,20 @@
 <!DOCTYPE html>
+<?php
+    if(isset($_POST['submit']))
+    {
+        include_once('config.php');
+        $nome = $_POST['nome'];
+        $data_nasc = $_POST['data_nasc'];
+        $Telefone = $_POST['Telefone'];
+        $nif = $_POST['nif'];
+        $email = $_POST['email'];
+        $disciplina = $_POST['disciplina'];
+    
+        $stmt = $conexao->prepare("INSERT INTO professores (nome, data_nasc, Telefone, nif, email, disciplina) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssssss", $nome, $data_nasc, $Telefone, $nif, $email, $disciplina);
+        $stmt->execute();
+    }
+    ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,7 +38,7 @@
         <div class="container">
             <h4 class="h4cad">Registro de Professores</h4>
             
-                <form action="" method="get">
+                <form action="" method="POST">
 
 
           <div class="cont_inp">
@@ -49,21 +65,14 @@
               <div class="input-group">
                 <label for="email">E-mail</label>
                 <input class="inp_group" type="email" name="email" id="email">
-            </div>
-
-            
-
-                
-                
+            </div>           
                 <div class="input-group">
                     <label for="disciplina">Disciplina</label>
-                    <select class="inp_group" name="disciplina" id="disciplina"></select>
-                </div>
-               
+                    <input type="text" class="inp_group" name="disciplina" id="disciplina">
+                </div>   
           </div>
-
-            <input class="inp_submit" type="submit" value="Registrar">
-            
+           <button class="inp_submit" name="submit" value="submit" type="submit"> Registar</button>
+           
                 </form>
         </div>
     
